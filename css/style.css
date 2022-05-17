@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Comfortaa";
+    src: url("../fonts/Comfortaa-Regular.ttf");
+}
+body {
+    background-color: #efefef;
+    font-family: "Comfortaa", sans-serif;
+}
+.flt__rght {
+    float: right;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.menu {
+    width: 1010px;
+    margin: 0 auto;
+    background-color: darkmagenta;
+    padding-bottom: 7px;
+}
+.menu__list {
+    list-style-type: none;
+    font-size: 0;
+}
+.menu__item {
+    display: inline-block;
+    position: relative;
+}
+.menu__link {
+    width: 250px;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 20px 20px;
+    background-color: #333;
+    color: #cacaca;
+    text-align: center;    
+    text-transform: uppercase;
+}
+.menu__item + .menu__item {
+    border-left: 1px solid rgb(70, 70, 70);
+}
+.menu__item:hover .menu__list {
+    /*display: block;*/
+    opacity: 1;
+    visibility: visible;
+}
+.menu__item .menu__item:hover .menu__list {
+    /*display: block;*/
+    opacity: 1;
+    visibility: visible;
+}
+.menu__link:hover {    
+    color: #fff;
+    background-color: rgb(36, 36, 36);
+    transition: all 0.1s linear;
+}
+.menu__list .menu__list {
+    /*display: none;*/
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 7px;
+    transition: all 0.3s linear;
+}
+.menu__list .menu__list .menu__list {
+    /*display: none;*/
+    *opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 400px;
+    top: -8px;
+    transition: all 0.15s linear;
+}
+.menu__list .menu__list .menu__item {
+    border: 1px solid rgb(150, 0, 150);
+}
+.menu__list .menu__list .menu__link {
+    width: 400px;
+    background-color: darkmagenta;
+    padding-left: 40px;
+    padding-right: 40px;    
+    text-transform: capitalize;
+    text-align: left;
+}
+.menu__list .menu__list .menu__link:hover {
+    background-color: rgb(190, 0, 190);
+}
+.menu__list .menu__list .menu__list .menu__item {
+    border: 1px solid rgb(160, 0, 160);
+}
+.menu__list .menu__list .menu__list .menu__link {
+    background-color: rgb(150, 0, 150);
+    width: 200px;
+    padding-left: 20px;   
+    text-transform: none;
+}
+.menu__list .menu__list .menu__link:hover {
+    /*background-color: darkmagenta;*/
+    background-color: rgb(200, 0, 200);
+}
